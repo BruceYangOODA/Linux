@@ -22,9 +22,23 @@
 | cal | 輸出當前月份的日曆 | cal -Number |  |  
 | hostname | 輸出主機名稱 | -f 全域名 |  |  
 | id |  |  |  |  
-| ps |  | ps -e列出全部的進程 -f顯示全部的列 |  |  
 | du | 查看目錄的真實大小 | du 路徑 -s只顯示匯總的大小 -h可讀 |  |  
 | find | 查找文件 | find 路徑 檔名 | -name按照文件名稱 -type按照檔案類型(f文件 or d目錄) |  
+| service | 服務 | service 服務名 start/stop/restart | service httpd start |  
+| ps |  | ps -e列出全部的進程 -f顯示全部的列 | ps -ef|qrep httpd |  
+| kill |  | kill 進程名稱 |  |  
+| killall |  | killall 進程名稱 |  |  
+| ifconfig | 獲取網卡信息 |  |  |  
+| reboot | 重新啟動 |  |  |  
+| shutdown | 關機 |  | shutdown -h 15:30 |  
+| uptime | 輸出計算機的運行時長 |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  

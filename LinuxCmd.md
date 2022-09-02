@@ -127,6 +127,18 @@
 | /etc/init.d/network restart |  |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  
+
+| ssh服務 |  |  |  |  
+| :----| ----: | :----: | :---- | 
+| 協議使用端口 默認22 |  |  | 0-65535 |  
+| cat /etc/ssh/ssh_config |  |  |  |  
+| service sshd start | 啟用ssh服務 |  |  |  
+| 常用遠端工具 | PuTTY Xshell | FileZilla |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  

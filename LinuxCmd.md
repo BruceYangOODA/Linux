@@ -36,8 +36,10 @@
 | vim | 開啟檔案 | vim 路徑 | 可以開啟未存在檔案 |  
 | vim |  | vim +數字 路徑 | 打開檔案,移動到指定行 |  
 | vim |  | vim +/關鍵詞 路徑 | 打開檔案，高亮關鍵詞 |  
-|  |  |  |  |  
-|  |  |  |  |  
+| ls | 列出資料夾檔案列表 |  |  |  
+| ll | 列出檔案詳細 | ll -a | 列出隱藏檔 |  
+| | |  |  |  
+| | |  |  |  
 
 
 |  |  |  |  |  
@@ -69,20 +71,67 @@
 | ctrl + r | (撤銷)恢復上一個動作 |  |  |  
 | :w | 保存檔案 |  |  |  
 | :w 路徑 | 另存檔案 |  |  |  
+| :wq | 保存檔案，並退出 |  |  |  
+| :x | 保存檔案，並退出 | 未修改的情況下，不會更改檔案編輯時間 |  |  
 | /關鍵詞 | 搜索關鍵詞 |  |  |  
 | N/n | 在搜索結果中切換上/下一個結果 |  |  |  
 | :nohl | no highlight 取消高亮 |  |  |  
 | :s/關鍵詞/替換的內容 | replace |  |  |  
 | :s/關鍵詞/替換的內容/g | replace all |  |  |  
 |  |  |  |  |  
+| ln -s | 創造自定義命令捷徑 |  |  |  
+|  |  |  |  |  
 |  |  |  |  |  
 
 | Vim 的配置 |  |   | |  
 | :----| ----: | :----: | :---- |  
 |  本地配置文件 ~/.vimrc  |  
-| <scope="col" colsapn="3"> 全局配置文件 /etc/vimrc |  
-|  |  |  |  
+|  全局配置文件 /etc/vimrc |  
+| set nu | 顯示行號 |  |  
+|  映射配置 |  
+| cat ~/.vashrc | 檢視映射配置 |  |  |  
+| vim ~/.vashrc |  編輯映射配置 |  |  |  
+| alias cls='clear' | 用cls觸發clear命令 |  |  |  
+
+| 重要文件 |  |  |  |  
+| :----| ----: | :----: | :---- |  
+| /etc/passwd | 存儲用戶的關鍵信息 |  |  |  
+| /etc/group | 存儲用戶組的關鍵信息 |  |  |  
+| /etc/shadow | 存儲用戶的密碼信息 |  |  |  
+|  |  |  |  |  
+| 用戶管理 |  |  |  |  
+| useradd |  | -g指定用戶的用戶主組,值可以是用戶組的id,也可以是組名 |  |  
+| useradd | -G指定用戶的用戶附加組,值可以是用戶組的id,也可以是組名 |  |  |  
+| useradd | | -u uid,用戶的id(用戶的識別符),系統會從500之後按順序分配uid, -u 可以自定義 |  |  
+| usermod | 用戶修改 |  | usermod -g 1003 iG 1003 lisi |  
+| passwd | 修改用戶密碼 | passwd 用戶名 -> 新密碼 |  |  
+| userdel | 刪除用戶 | userdel 用戶名 |  |  
+| groupadd | 用戶組添加 | groupadd -g 1003 用戶名 |  |  
+| groupdel | 刪除用戶組 |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  
+
+| 網路設置 |  |  |  |  
+| :----| ----: | :----: | :---- |  
+| ls /etc/sysconfig/network-scripts |  |  |  |  
+| cat /etc/sysconfig/network-scripts/ifcfg-enp0s3 |  |  |  |  
+|  | ONBOOT | 使否開機啟動 |  |  
+|  | BOOTPROTO | ip地址分配方式,DHCP表示動態主機分配協議 |  |  
+|  | HWADDR | 硬件地址,MAC地址 |  |  
+| 重啟網卡 |  |  |  |  
+| service network restart |  |  |  |  
+| ifdown | 停止網卡 | ifdown 網卡名 |  |  
+| ifup | 啟用網卡 | ifup 網卡名 |  |  
+| ls /etc/init.d/ |  |  |  |  
+| /etc/init.d/network restart |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+|  |  |  |  |  
+
+
+
 

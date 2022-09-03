@@ -172,11 +172,27 @@
 | iptables |  | iptables -A INPUT -p tcp ==dport 80 -j ACCEPT | INPUT:進站請求 OUTPUT:出站請求 -p:protoclo(icmp/tcp/upd) --dport:指定端口 -j:ACCEPT/REJECT | 
 | /etc/init.d/iptables save | 保存上述防火牆規則 |  |  | 
 |  |  |  |  | 
+
+| 軟件管理 | rpm |  |  | 
+| :----| ----: | :----: | :---- | 
+| rpm| 查詢是否有某軟件 | rpm -qa|grep 關鍵詞 | --q:查詢 -a:全部 | 
+| rpm | 刪除某軟件 | rpm -e httpd |  | 
+| rpm | 刪除軟體依賴關係 | rpm -e httpd --nodeps |  | 
+|  |  |  |  | 
+| lsblk | 查看塊狀設備(硬盤,光盤) |  |  | 
+| umount | 光盤的解掛 | umount 路徑 |  | 
+|  | 光盤的設備原始地址 | /dev |  | 
+|  |  | mkdir /mnt/dvd |  | 
+| mount | 光盤的掛載 | mount /dev/sr0 /mnt/dvd |  | 
+| lsblk |  |  |  | 
+| rpm -ivh | 安裝軟件包 | i:install v:進度條 h:以#顯示進度 |  | 
 |  |  |  |  | 
 |  |  |  |  | 
 |  |  |  |  | 
 |  |  |  |  | 
 |  |  |  |  | 
+|  |  |  |  | 
+
 |  |  |  |  | 
 |  |  |  |  | 
 |  |  |  |  | 

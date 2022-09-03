@@ -133,16 +133,60 @@
 | 協議使用端口 默認22 |  |  | 0-65535 |  
 | cat /etc/ssh/ssh_config |  |  |  |  
 | service sshd start | 啟用ssh服務 |  |  |  
-| 常用遠端工具 | PuTTY Xshell | FileZilla |  |  
+| 常用遠端工具 | PuTTY Xshell | FileZilla | PSCP PSFTP |  
 |  |  |  |  |  
 |  |  |  |  |  
 |  |  |  |  |  
+
+| 主機設定 |  |  |  |  
+| :----| ----: | :----: | :---- | 
+| hostname | 取得主機名 | -f |  |  
+| hostname | 臨時設置主機名 | hostname 主機名 |  |  
+| vim /etc/sysconfig/network | 永久修改主機名 | HOSTNAME=主機名 |  |  
 |  |  |  |  |  
+| vim /etc/hosts | 增添localhost域名 | 127.0.0.1 localhost..... yunwei |  |  
 |  |  |  |  |  
-|  |  |  |  |  
-|  |  |  |  |  
-|  |  |  |  |  
-|  |  |  |  |  
+|  |  |  |  | 
+
+| 開機啟動管理服務 | chkconfig |  |  | 
+| :----| ----: | :----: | :---- | 
+| chkconfig --list |  |  |  | 
+| chkconfig --del 服務名 | 關閉開機啟動服務 |  |  | 
+| chkconfig --add 服務名 | 開啟開機啟動服務 |  |  | 
+|  |  |  |  | 
+
+| 時間同步管理 | ntp服務 |  |  | 
+| :----| ----: | :----: | :---- | 
+| date |  |  |  | 
+| ntpdate  | 朔源時間服務器 | ntpdate time.stdtime.gov.tw | 118.163.81.61  | 
+| service ntpd start | 啟動時間同步 |  |  | 
+| /etc/init.d/ntpd start | 啟動時間同步 |  |  | 
+|  |  |  |  | 
+
+| 防火牆 |  |  |  | 
+| :----| ----: | :----: | :---- | 
+| ps -ef|grep iptables  |  |  |  | 
+| chkconfig --list | grep iptables |  |  |  | 
+| service iptables start |  |  |  | 
+|  |  |  |  | 
+| iptables |  | iptables -A INPUT -p tcp ==dport 80 -j ACCEPT | INPUT:進站請求 OUTPUT:出站請求 -p:protoclo(icmp/tcp/upd) --dport:指定端口 -j:ACCEPT/REJECT | 
+| /etc/init.d/iptables save | 保存上述防火牆規則 |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+|  |  |  |  | 
+
+
 
 
 

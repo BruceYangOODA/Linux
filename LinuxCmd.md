@@ -1,4 +1,4 @@
-
+[Linux教程 命令指令 运维 服务器 项目上线 CentOS 从入门到精通](https://www.youtube.com/watch?v=1J8QfSZHV9Q&list=PL9nxfq1tlKKlImsI9_iDguCUOhLFGamKI)
 20220828
 
 | CMD | NAME | OPTION | NOTE |  
@@ -187,11 +187,17 @@
 | lsblk |  |  |  | 
 | rpm -ivh | 安裝軟件包 | i:install v:進度條 h:以#顯示進度 |  | 
 |  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
+
+| 計畫任務 |  |  |  | 
+| :----| ----: | :----: | :---- | 
+| crontab | 計畫任務 | -l:列出計畫任務列表 -u:指定用戶名 |  | 
+| crontab | -e:編輯計畫任務 |   |  | 
+| crontab | -r:刪除計畫任務 |  |  | 
+|  |  |  | 分時日月周  | 
+| 不允許user使用計畫任務 |  |  |  | 
+| ls /etc/cron.deny |  |  |  | 
+| vum /etc/cron.deny|  |  |  | 
+|  | #1 用戶名 |  |  | 
 
 |  |  |  |  | 
 |  |  |  |  | 

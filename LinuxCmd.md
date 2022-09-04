@@ -208,12 +208,14 @@
 | tcpdump | 查看數據包 | tcpdump 協議 port 端口 host 地址 | tcpdump port 22 | 
 | tcpdump | 查看數據包  | tcpdum -i 網卡設備名 |  | 
 |  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
-|  |  |  |  | 
+
+| SHELL入門 |  |  |  | 
+| :----| ----: | :----: | :---- | 
+| touch test.sh |  |  |  | 
+| vim test.sh |  |  |  | 
+|  | 1# !/bin/bash 2# echo 'hello world' |  |  | 
+| chmod +x test.sh | 加上執行權限 |  |  | 
+| ./test.sh | 執行腳本 | 沒有./ 會直接去PATH找 |  | 
 |  |  |  |  | 
 |  |  |  |  | 
 |  |  |  |  | 
